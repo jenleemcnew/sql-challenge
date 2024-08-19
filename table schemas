@@ -1,3 +1,11 @@
+--Drop table if exists
+drop table if exists titles;
+drop table if exists departments;
+drop table if exists dept_emp;
+drop table if exists dept_manager;
+drop table if exists employees;
+drop table if exists salaries;
+
 -- Creating departments table
 CREATE TABLE departments (
     dept_no CHAR(4) PRIMARY KEY,
@@ -48,3 +56,22 @@ CREATE TABLE titles (
     emp_no INT,
     FOREIGN KEY (emp_no) REFERENCES employees (emp_no)
 );
+
+-- checking to see if imports worked
+select *
+from departments d;
+
+select *
+from titles t;
+
+select *
+from employees e;
+
+select *
+from dept_emp de;
+
+select *
+from dept_manager dm;
+
+select *
+from salaries s;
